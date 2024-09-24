@@ -1,0 +1,83 @@
+/* Page container styling */
+.forums {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%); /* Match login page gradient */
+    color: #2E8B57; /* Darker green text color */
+    padding: 50px;
+    box-sizing: border-box;
+  }
+  
+  /* Forum items container styling */
+  .forum-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    backdrop-filter: blur(10px); /* Consistent blur */
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15); /* Consistent shadow */
+  }
+  
+  /* Forum card styling */
+  .forum-card {
+    width: 100%;
+    padding: 1.5rem;
+    background-color: #ffffff;
+    border: 1px solid #2E8B57; /* Darker green border */
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Consistent shadow */
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* Forum card hover effect */
+  .forum-card:hover {
+    transform: translateY(-5px); /* Lift on hover */
+  }
+  
+  /* Forum title styling */
+  .forum-card h3 {
+    color: #2E8B57; /* Darker green text */
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Forum description styling */
+  .forum-card p {
+    color: #444;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  /* Button styling */
+  .create-post-btn {
+    padding: 0.8rem 2rem;
+    border: none;
+    background-color: #2E8B57; /* Darker green background */
+    color: #ffffff; /* White text */
+    border-radius: 150px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    font-size: 1rem;
+    text-align: center;
+  }
+  
+  /* Button hover effect */
+  .create-post-btn:hover {
+    background-color: #1e6f41; /* Darker green on hover */
+  }
+  
+  /* Separator styling */
+  .separator {
+    height: 80%;
+    width: 2px;
+    background-color: #f0f0f0; /* Lighter separator line */
+  }
+  

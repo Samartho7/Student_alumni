@@ -1,0 +1,28 @@
+/* AlumniPage.css */
+
+.card {
+  border: 1px solid #ddd;
+}
+
+.card-img {
+  
+  object-fit: cover; /* Ensures the image covers the dimensions without distortion */
+}
+
+.card-title {
+  font-size: 1.25rem;
+}
+
+.card-subtitle {
+  font-size: 1rem;
+}
+
+.card-text {
+  font-size: 0.875rem;
+}
+
+@media (max-width: 768px) {
+  .card {
+    margin-bottom: 1rem;
+  }
+}

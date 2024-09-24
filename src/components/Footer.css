@@ -1,0 +1,26 @@
+/* Footer.css */
+
+/* Modern white gradient background */
+.custom-footer {
+  background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%);
+  color: #2E8B57; /* Darker green for text */
+  padding: 20px;
+  text-align: center;
+  font-size: 1rem;
+  box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.15);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+/* Footer text styling */
+.custom-footer p {
+  margin: 0;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+/* Footer text hover effect */
+.custom-footer p:hover {
+  color: #4CAF50; /* Lighter green on hover */
+}

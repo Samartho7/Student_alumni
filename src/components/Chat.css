@@ -1,0 +1,317 @@
+/* Chat container */
+.chatContainer {
+  display: flex;
+  height: 90vh;
+  background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%); /* Matching gradient background */
+  padding: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+/* Left panel styles (List & User Info) */
+.list {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid rgba(206, 202, 202, 0.453);
+  background-color: #ffffff; /* White background for consistency */
+  border-radius: 10px; /* Rounded corners */
+}
+
+.userInfo .user {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  border-bottom: 1px solid rgba(206, 202, 202, 0.453);
+  background-color: #f0f0f0; /* Lighter background for user info */
+}
+
+.user img {
+  height: 50px;
+  width: 50px;
+  object-fit: cover;
+  border-radius: 50%; /* Circular profile images */
+}
+
+.user h3 {
+  color: #2E8B57; /* Green text color */
+}
+
+.chatList {
+  flex: 1;
+  overflow-y: auto;
+  background-color: #ffffff; /* White background for chat list */
+}
+
+.chatList .search {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.searchBar {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 25px; /* Rounded corners */
+  background-color: #f0f0f0; /* Lighter background for search bar */
+  padding: 10px;
+}
+
+.searchBar input {
+  flex: 1;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #2E8B57; /* Green text color */
+}
+
+.items {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  border-bottom: 1px solid rgba(206, 202, 202, 0.453);
+  cursor: pointer;
+  background-color: #f0f0f0; /* Lighter background for items */
+}
+
+.items img {
+  height: 40px;
+  width: 40px;
+  object-fit: cover;
+  border-radius: 50%; /* Circular profile images */
+}
+
+/* Right panel styles (Chat) */
+.chat {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff; /* White background for chat area */
+  border-radius: 10px; /* Rounded corners */
+}
+
+.chatUser {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  border-bottom: 1px solid rgba(206, 202, 202, 0.453);
+  background-color: #f0f0f0; /* Lighter background for chat user */
+}
+
+.chatUser img {
+  height: 4vw;
+  width: 4vw;
+  object-fit: cover;
+  border-radius: 50%; /* Circular profile images */
+}
+
+.chatUser .texts {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.chatUser .texts span {
+  font-size: 1.2rem; /* Adjusted font size */
+  font-weight: 500;
+  color: #2E8B57; /* Green text color */
+}
+
+.chatUser .texts p {
+  font-size: 0.9rem; /* Adjusted font size */
+  color: #aaa; /* Light grey color */
+}
+
+.chatUser .icons {
+  margin-left: auto;
+}
+
+.center {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  background-color: #ffffff; /* White background for chat messages */
+}
+
+/* General message styles */
+.message {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.message img {
+  height: 40px;
+  width: 40px;
+  object-fit: cover;
+  border-radius: 50%; /* Circular profile images */
+}
+
+.message .text {
+  background-color: #f0f0f0; /* Lighter background for messages */
+  padding: 15px;
+  border-radius: 20px; /* More rounded corners */
+  max-width: 70%; /* Limit width of message */
+}
+
+.message .text span {
+  font-size: 0.9rem; /* Adjusted font size */
+  color: #2E8B57; /* Green text color */
+}
+
+/* Sent message styles */
+.message.own {
+  justify-content: flex-end; /* Align to the right */
+}
+
+.message.own .text {
+  background-color: #5183fe; /* Blue background for sent messages */
+  color: #fff; /* White text color */
+  align-self: flex-end; /* Ensures the text block is also right-aligned */
+}
+
+/* Input and buttons */
+.bottom {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 15px; /* Slightly reduced padding */
+  border-top: 1px solid rgba(206, 202, 202, 0.453);
+  background-color: #f0f0f0; /* Lighter background for input area */
+}
+
+.icons {
+  display: flex;
+  gap: 10px; /* Adjusted gap */
+}
+
+.icons img {
+  height: 2rem; /* Increased size */
+  width: 2rem; /* Increased size */
+  cursor: pointer;
+}
+
+.emoji {
+  position: relative;
+}
+
+.picker {
+  position: absolute;
+  right: 0;
+  bottom: 60px; /* Adjusted bottom position */
+}
+
+.emoji img {
+  height: 2rem; /* Increased size */
+  width: 2rem; /* Increased size */
+  cursor: pointer;
+}
+
+.sendButton {
+  background-color: #2E8B57; /* Green background */
+  color: #fff; /* White text color */
+  border: none;
+  padding: 10px 25px; /* Adjusted padding */
+  border-radius: 25px; /* More rounded corners */
+  cursor: pointer;
+  font-size: 1rem; /* Adjusted font size */
+}
+
+/* Update for search and plus icons */
+.searchBar img,
+.search img {
+  height: 2rem; /* Increased size */
+  width: 2rem; /* Increased size */
+  cursor: pointer;
+}
+
+.searchBar img:hover,
+.search img:hover {
+  opacity: 0.8;
+}
+
+/* Input field */
+.bottom input {
+  flex: 1;
+  background-color: #f0f0f0; /* Lighter background */
+  border: none;
+  border-radius: 25px; /* More rounded corners */
+  padding: 10px;
+  outline: none;
+  font-size: 1rem;
+  color: #2E8B57; /* Green text color */
+}
+
+.bottom input::placeholder {
+  color: #aaa; /* Light grey placeholder text */
+}
+
+/* Same styles for both Jane Doe and Joe Williams */
+.userInfo .user, .chatUser {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  border-bottom: 1px solid rgba(206, 202, 202, 0.453);
+  background-color: #f0f0f0; /* Lighter background */
+}
+
+.user img, .chatUser img {
+  height: 50px;
+  width: 50px;
+  object-fit: cover;
+  border-radius: 50%; /* Circular profile images */
+}
+
+.user h3, .chatUser .texts span {
+  color: #2E8B57; /* Green text color */
+}
+
+/* Add more styles as necessary for consistency */
+.userInfo .user, .chatUser {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  border-bottom: 1px solid rgba(206, 202, 202, 0.453);
+  background-color: #f0f0f0; /* Lighter background */
+}
+
+.user img, .chatUser img {
+  height: 50px;
+  width: 50px;
+  object-fit: cover;
+  border-radius: 50%; /* Circular profile images */
+}
+
+.user h3, .chatUser .texts span {
+  color: #2E8B57; /* Green text color */
+}
+
+.items {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  border-bottom: 1px solid rgba(206, 202, 202, 0.453);
+  cursor: pointer;
+  background-color: #f0f0f0; /* Lighter background for items */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition */
+}
+
+.items:hover {
+  background-color: #e0e0e0; /* Darker background on hover */
+  transform: scale(1.02); /* Slightly enlarge the item */
+}
+
+.items .texts {
+  text-align: left; /* Left align text */
+  flex: 1; /* Allow the text to take full width */
+}

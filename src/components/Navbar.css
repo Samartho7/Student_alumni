@@ -1,0 +1,68 @@
+/* Navbar container styling */
+.custom-navbar {
+  background-color: #f8f9fa; /* Light background color */
+  padding: 1rem; /* Consistent padding around the navbar */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15); /* Shadow effect */
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between; /* Ensure elements are spaced out */
+  align-items: center;
+}
+
+/* Navbar brand styling (Alumnify) */
+.custom-navbar .navbar-brand {
+  font-size: 1.5rem; /* Larger font size */
+  font-weight: bold;
+  color: #2E8B57; /* Dark green color for brand name */
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effect */
+  padding-left: 50px; /* 50px padding on the left of Alumnify */
+  padding-right: 50px; /* 50px padding on the right of Alumnify */
+}
+
+.custom-navbar .navbar-brand:hover {
+  color: #4CAF50; /* Lighter green on hover */
+  transform: scale(1.05); /* Slight scaling effect on hover */
+}
+/* Add styles for the logo */
+.navbar-logo {
+  width: 40px; /* Adjust the width of the logo as per your design */
+  height: auto; /* Maintain the aspect ratio */
+  margin-right: 10px; /* Add space between the logo and the text */
+  vertical-align: middle; /* Align the logo with the text */
+}
+
+/* Navbar links styling */
+.custom-navbar .nav-link {
+  color: #333; /* Dark text color for links */
+  font-weight: 500;
+  padding: 0.5rem 1rem; /* Add padding for better click area */
+  border-radius: 5px; /* Rounded corners for hover effect */
+  transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Navbar links hover styling */
+.custom-navbar .nav-link:hover {
+  color: #ffffff; /* White text color on hover */
+  background-color: rgba(76, 174, 80, 0.8); /* Green background with 80% opacity */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect for a 3D appearance */
+  transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+/* Aligning navbar items to the right */
+.custom-navbar .navbar-nav {
+  display: flex;
+  justify-content: flex-end; /* Align navbar items to the right */
+  align-items: center; /* Vertically center the nav items */
+  width: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .custom-navbar {
+    flex-direction: column; /* Stack navbar items vertically on small screens */
+  }
+
+  .custom-navbar .navbar-nav {
+    justify-content: center; /* Ensure nav links remain centered */
+  }
+}

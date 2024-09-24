@@ -1,0 +1,118 @@
+/* App.css */
+
+/* Root container styling */
+
+#root {
+  max-width: 100%; /* Make it full width */
+  margin: 0; /* Remove auto margins */
+  padding: 0; /* Remove padding */
+  text-align: center;
+}
+
+/* Adjust for any container-specific classes */
+.container-fluid {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+/* If you're using Bootstrap's container, override its padding */
+.container {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+/* App.css */
+
+/* App.css */
+
+/* Global heading styles for Our Services and Our Top Mentors */
+h2 {
+  font-size: 2rem; /* Larger font size */
+  font-weight: bold;
+  color: #2E8B57; /* Dark green color */
+  margin-bottom: 1.5rem;
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover */
+  position: relative;
+}
+
+/* Add an underline effect for headings */
+h2::after {
+  content: '';
+  width: 60px;
+  height: 4px;
+  background-color: #4CAF50; /* Lighter green underline */
+  display: block;
+  margin: 10px auto 0;
+  transition: width 0.3s ease;
+}
+
+/* Hover effect to expand underline and change color */
+h2:hover {
+  color: #4CAF50; /* Change to lighter green */
+  transform: scale(1.05); /* Slight scaling effect on hover */
+}
+
+h2:hover::after {
+  width: 100px; /* Expand underline width on hover */
+}
+
+
+/* Logo styling */
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms ease;
+}
+
+/* Hover effect for logos */
+.logo:hover {
+  filter: drop-shadow(0 0 2em #4CAF50aa); /* Green shadow for modern feel */
+}
+
+/* Hover effect specific for React logo */
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa); /* React blue shadow */
+}
+
+/* Logo spin animation */
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Only apply spin if reduced motion is not preferred */
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+/* Card component styling */
+.card {
+  padding: 2em;
+  background: #ffffff; /* Solid white card background */
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+/* Card hover effect */
+.card:hover {
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Footer text styling */
+.read-the-docs {
+  color: #888;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+/* Footer text hover effect */
+.read-the-docs:hover {
+  color: #4CAF50; /* Change text color to green on hover */
+}

@@ -1,0 +1,50 @@
+.about-us-container {
+  margin: 3rem auto;
+  max-width: 1000px;
+  padding: 1rem 2rem !important; /* Added left and right padding */
+  background-color: #ffffff; /* White background for a clean look */
+  border-radius: 10px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+  text-align: left; /* Align text to the left */
+}
+
+/* Center the "About Us" heading */
+.center-heading {
+    text-align: center;
+    font-size: 2rem; /* Adjust as needed */
+    font-weight: bold;
+    color: #333; /* Choose a suitable color */
+    margin-bottom: 1rem;
+  }
+  
+  /* Ensure text is left-aligned but respects container padding */
+  .about-us {
+    text-align: left;
+    padding: 1rem; /* Add padding for spacing */
+    color: #444; /* Choose a suitable color */
+    font-family: 'Roboto', sans-serif; /* Use the same font family */
+  }
+  
+  /* Style for headings */
+  .about-us h2, .about-us h3 {
+    color: #333; /* Choose a suitable color */
+    font-weight: bold;
+  }
+  
+  /* Add styles for paragraphs */
+  .about-us p {
+    font-size: 1rem; /* Adjust font size as needed */
+    line-height: 1.6; /* Improve readability */
+  }
+  
+  /* Style for the CardsComponent */
+  .cards-component {
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+  
+  /* Additional spacing for the container if needed */
+  .container.mt-4 {
+    padding: 2rem 1rem;
+  }
+  

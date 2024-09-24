@@ -1,0 +1,83 @@
+{ 
+  "alumni" : [ 
+    { 
+        "name": "John Doe",
+        "skills": ["python", "data science"],
+        "interests": ["AI", "deep learning"],
+        "location": "NY",
+        "mentorship": true
+    },
+    { 
+        "name": "Jane Smith",
+        "skills": ["javascript", "React"],
+        "interests": ["web development", "frontend"],
+        "location": "CA",
+        "mentorship": true
+    },
+    { 
+        "name": "Robert Brown", 
+        "skills": ["C++","Game design"], 
+        "interests": ["Game development","ML"], 
+        "location": "TX" 
+        
+    },
+    { 
+        "name": "Lisa Johnson",  
+        "skills": ["data science","deep learning"], 
+        "interests": ["AI","ML"], 
+        "location": "FL"
+         
+    },
+    { 
+        "name": "Michael Green", 
+        "skills": ["java","deep learning"], 
+        "interests": ["AI","NLP"], 
+        "location": "IL" 
+    },
+    { 
+        "name": "Emily White",
+        "skills": ["Python", "Data Visualization", "Machine Learning"],
+        "interests": ["Data Science", "Artificial Intelligence"],
+        "location": "Seattle, WA",
+        "mentorship": true
+    },
+    { 
+        "name": "William Black",
+        "skills": ["Java", "Android Development", "Spring Boot"],
+        "interests": ["Mobile App Development", "Cloud Computing"],
+        "location": "Austin, TX"
+    },
+    { 
+        "name": "Jessica Blue",
+        "skills": ["JavaScript", "React", "Node.js"],
+        "interests": ["Frontend Development", "Web Applications"],
+        "location": "San Francisco, CA"
+    },
+    { 
+        "name": "Chris Gray",
+        "skills": ["C#", ".NET", "Web Development"],
+        "interests": ["Software Engineering", "Cloud Solutions"],
+        "location": "New York, NY",
+        "mentorship": true
+    },
+    { 
+        "name": "Sophia Yellow",
+        "skills": ["HTML", "CSS", "UI/UX Design"],
+        "interests": ["Graphic Design", "User Experience"],
+        "location": "Los Angeles, CA"
+    },
+    { 
+        "name": "Ethan Green",
+        "skills": ["C++", "Game Development", "Unity"],
+        "interests": ["Gaming", "Interactive Media"],
+        "location": "Chicago, IL"
+    },
+    { 
+        "name": "Olivia Blue",
+        "skills": ["PHP", "MySQL", "Web Development"],
+        "interests": ["Full Stack Development", "Digital Marketing"],
+        "location": "Miami, FL",
+        "mentorship": true
+    }  
+  ]
+} 

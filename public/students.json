@@ -1,0 +1,66 @@
+ 
+{
+ "students" : [
+   { 
+    "name": "Aarav Gupta",
+    "skills": ["python", "machine learning"],
+    "interests": ["AI", "data science"],
+    "location": "NY"
+   },
+   { 
+    "name": "Ishita Mehra",
+    "skills": ["javascript", "web development"],
+    "interests": ["frontend", "UX"],
+    "location": "CA"
+   },
+   { 
+    "name": "Rohit Sharma", 
+    "skills": ["C++","Game design"], 
+    "interests": ["Game development","ML"], 
+    "location": "INDIA" 
+   }, 
+   { 
+    "name": "Neha Patel",  
+    "skills": ["java","deep learning"], 
+    "interests": ["data science","AI"], 
+    "location": "NZ" 
+   },
+   { 
+    "name": "Karan Singh", 
+    "skills": ["python","Machine learning"], 
+    "interests": ["AI","NLP"], 
+    "location": "EUROPE" 
+   },
+   { 
+    "name": "Anjali Rao",
+    "skills": ["Python", "Data Analysis", "Machine Learning"],
+    "interests": ["Artificial Intelligence", "Data Science"],
+    "location": "Mumbai, India" 
+       
+    },
+   { 
+    "name": "Rahul Verma",  
+    "skills": ["Java", "Spring Framework", "Microservices"],
+    "interests": ["Web Development", "Cloud Computing"],
+    "location": "Bangalore, India"    
+    },
+   { 
+    "name": "Priya Desai", 
+    "skills": ["JavaScript", "React", "Node.js"],
+    "interests": ["Frontend Development", "UI/UX Design"],
+    "location": "Pune, India"    
+    },
+   { 
+    "name": "Sahil Jain",  
+    "skills": ["C++", "Game Development", "Unity"],
+    "interests": ["Gaming", "Game Design"],
+    "location": "Delhi, India"    
+    },
+   { 
+    "name": "Sneha Kapoor",  
+    "skills": ["HTML", "CSS", "Web Design"],
+    "interests": ["Graphic Design", "Digital Marketing"],
+    "location": "Chennai, India"   
+    }
+  ]
+}

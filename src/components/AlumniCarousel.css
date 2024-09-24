@@ -1,0 +1,67 @@
+/* Set the width and height of the alumni carousel */
+.alumni-carousel {
+    width: 100%; /* Adjust as needed, can be 50% or full width */
+    margin: 0 auto; /* Center the carousel */
+    padding: 30px 0;
+}
+
+/* Alumni card styling */
+.alumni-card {
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+    /* Ensure all cards are of the same size */
+    width: 100%; /* Ensures that the card width is consistent */
+    max-width: 250px; /* Adjust based on your needs */
+    margin: auto;
+    /* Decrease margin between cards */
+    margin-bottom: 10px; /* Reduced this value for a smaller gap */
+}
+
+.alumni-card:hover {
+    transform: translateY(-10px); /* Slight lift on hover */
+}
+
+/* Ensure the image is a square and add space at the top */
+.alumni-card img {
+    width: 200px;  /* Set fixed width */
+    height: 200px; /* Set height equal to width to make it square */
+    object-fit: cover; /* Ensure the image covers the square without distortion */
+    border-radius: 50%; /* Optional: Make the image circular */
+    margin: 20px auto 0; /* Add 20px margin at the top */
+}
+
+.alumni-card .card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #2E8B57; /* Same green as the navbar */
+}
+
+.alumni-card .card-text {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Remove the custom arrow styling to revert to default appearance */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: gray; /* Remove this line to revert to default */
+    border-radius: 80%; /* Optional: Remove or adjust as needed */
+}
+
+/* Optional: Adjust the size of the carousel arrows */
+/*
+.carousel-control-prev,
+.carousel-control-next {
+    width: 50px; /* Adjust width as needed */
+    height: 50px; /* Adjust height as needed */
+}
+*/
+
+/* Adjust carousel item layout for mobile */
+@media (max-width: 768px) {
+    .alumni-card {
+        margin-bottom: 10px; /* Decrease margin on mobile */
+    }
+}

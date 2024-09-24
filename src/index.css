@@ -1,0 +1,10 @@
+/* Custom CSS */
+html, body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.carousel, .cards, .footer {
+  width: 100%;
+}

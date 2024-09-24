@@ -1,0 +1,20 @@
+alumnicardcomponent
+
+mentorship - card, opens to alumni who are willing to guide
+networking - our website provides networking between students and alumni
+resources - the mentors provide good resources such as roadmap, guidance, etc.
+
+
+forum
+
+
+mentorship page - alumnis who are ready to mentor
+
+clerk dashboard for login/register (first login from this then skills choose etc.)
+matching algo components for student
+
+skills (most emphasis) - 70%
+interest(normal emphasis) - 25%
+"MAKE ABOVE TWO REQUIRED IN ADDITIONAL STEPS AFTER LOGIN/REGISTER"
+
+location(low emphasis) - 5% 
