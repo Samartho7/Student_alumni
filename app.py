@@ -9,6 +9,21 @@ app = Flask(__name__)
 CORS(app, resources={r"/match": {"origins": "http://localhost:5173"}})
 model = SentenceTransformer('paraphrase-MiniLM-L6-v2')
 
+def convert_numpy_types(obj):
+    if isinstance(obj, np.ndarray):
+        return obj.tolist()
+    elif isinstance(obj, (np.float32, np.float64)):
+        # Convert floats to integers specifically for percentages
+        return int(round(obj))
+    elif isinstance(obj, (np.int32, np.int64)):
+        return int(obj)
+    elif isinstance(obj, list):
+        return [convert_numpy_types(item) for item in obj]
+    elif isinstance(obj, dict):
+        return {key: convert_numpy_types(value) for key, value in obj.items()}
+    else:
+        return obj
+
 # Load students and alumni data from JSON files
 students = [
    { 
@@ -202,7 +217,7 @@ def match_students_to_alumni(students, alumni, skill_vectors, interest_vectors):
         matches[student['name']] = sorted_matches[:5]
     
     return matches
-
+    
 @app.route('/match', methods=['POST'])
 def match():
      # Extract the list of alumni profiles
@@ -214,8 +229,11 @@ def match():
     
     skill_vectors, interest_vectors = vectorize_profiles(alumni)  # Pass correct alumni list to vectorize
     results = match_students_to_alumni(data['students'], alumni, skill_vectors, interest_vectors)
+    results = convert_numpy_types(results)
     print("Matching results:", results)
     return jsonify(results)
 
 if __name__ == '__main__':
     app.run(debug=True)
+
+
