@@ -1,16 +1,20 @@
 import React from 'react';
 import { Carousel, Container } from 'react-bootstrap';
-import car1 from '../assets/car1.jpg';  
-import car2 from '../assets/car2.jpg';  
-import car3 from '../assets/car3.jpg'; 
+import { VscTriangleRight, VscTriangleLeft } from "react-icons/vsc"; // Example: React Icons
+import car1 from '../assets/car1.jpg';
+import car2 from '../assets/car2.jpg';
+import car3 from '../assets/car3.jpg';
 import './CarouselComponent.css';
 
 const CarouselComponent = () => {
   return (
     <Container fluid className="p-0">
-      <Carousel>
+      <Carousel
+        nextIcon={<VscTriangleRight style={{ color: '#fff', fontSize: '3.5rem' }} />}
+        prevIcon={<VscTriangleLeft style={{ color: '#fff', fontSize: '3.5rem' }} />}
+      >
         <Carousel.Item>
-          <img className="d-block w-100" src={car1} alt="First slide"/>
+          <img className="d-block w-100" src={car1} alt="First slide" />
           <Carousel.Caption>
             <h3>Welcome to Our Portal</h3>
             <p>Connecting Students and Alumni</p>

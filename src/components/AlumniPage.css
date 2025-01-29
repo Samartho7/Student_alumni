@@ -1,28 +1,63 @@
 /* AlumniPage.css */
 
+/* Set a fixed size for cards */
 .card {
   border: 1px solid #ddd;
+  width: 100%;
+  max-width: 250px;
+  height: 350px; /* Fixed height for uniformity */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ensures consistent spacing */
+  text-align: center;
+  overflow: hidden; /* Prevent content overflow */
 }
 
+/* Card image styles */
 .card-img {
-  
-  object-fit: cover; /* Ensures the image covers the dimensions without distortion */
+  width: 100%;
+  height: 150px; /* Fixed height for the image */
+  object-fit: cover; /* Ensures image fills the space */
+  border-bottom: 1px solid #ddd; /* Add a separator */
 }
 
+/* Card body */
+.card-body {
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Spread content evenly */
+  height: calc(350px - 150px); /* Ensure body adjusts relative to card height */
+}
+
+/* Card title styles */
 .card-title {
-  font-size: 1.25rem;
-}
-
-.card-subtitle {
   font-size: 1rem;
+  font-weight: bold;
+  margin: 0.5rem 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; /* Truncate long titles with ellipsis */
 }
 
+/* Card text styles */
 .card-text {
   font-size: 0.875rem;
+  margin: 0.25rem 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
+/* Responsive design for smaller screens */
 @media (max-width: 768px) {
   .card {
-    margin-bottom: 1rem;
+    max-width: 100%;
+    height: 300px; /* Adjust height for smaller screens */
+  }
+
+  .card-img {
+    height: 120px; /* Adjust image height */
   }
 }

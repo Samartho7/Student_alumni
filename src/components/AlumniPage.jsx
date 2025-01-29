@@ -180,7 +180,7 @@ const AlumniPage = () => {
           </Col>
         ) : (
           filteredAlumni.map((alum, index) => (
-            <Col md={4} key={index} className="mb-4">
+            <Col md={2} key={index} className="mb-4">
               <Card>
                 <Card.Img variant="top" src={alumniImages[alum.name]} alt={alum.name} />
                 <Card.Body>

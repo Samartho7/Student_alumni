@@ -1,5 +1,6 @@
 import React from 'react';
 import { Carousel, Card, Row, Col } from 'react-bootstrap';
+import { VscTriangleRight, VscTriangleLeft } from "react-icons/vsc"; // Example: React Icons
 import './AlumniCarousel.css'; // Custom CSS for alumni carousel
 import alm1 from '../assets/alm1.jpg';
 import alm2 from '../assets/alm2.jpg';
@@ -32,7 +33,10 @@ const AlumniCarouselComponent = () => {
   ];
 
   return (
-    <Carousel className="alumni-carousel">
+    <Carousel className="alumni-carousel"
+            nextIcon={<VscTriangleRight style={{ color: 'black', fontSize: '3rem' }} />}
+            prevIcon={<VscTriangleLeft style={{ color: 'black', fontSize: '3rem' }} />}
+            >
       {/* Divide alumni profiles into groups of 4 per carousel item */}
       {[0, 4, 8].map((startIndex) => (
         <Carousel.Item key={startIndex}>

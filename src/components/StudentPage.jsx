@@ -336,33 +336,46 @@ const StudentPage = () => {
         </Col>
       </Row>
       <Row>
-        {filteredStudents.length === 0 ? (
-          <Col className="text-center my-4">
-            <h4>NO RESULTS</h4>
-          </Col>
-        ) : (
-          filteredStudents.map((student, index) => (
-            <Col md={4} key={index} className="mb-4">
-              <Card>
-                <Card.Img variant="top" src={studentImages[student.name]} alt={student.name} />
-                <Card.Body>
-                  <Card.Title>{student.name}</Card.Title>
-                  {/* Display top matches */}
-                  <h5>Top Matches:</h5>
-                  <ul>
-                    {matches[student.name]?.map(match => (
-                      <li key={match.alumni}>
-                        <img src={alumniImages[match.alumni]} alt={match.alumni} style={{width: '50px', height: '50px', borderRadius: '50%'}} />
-                        {match.alumni} - {match.score}%
-                      </li>
-                    )) || <li>No matches found.</li>}
-                  </ul>
-                </Card.Body>
-              </Card>
-            </Col>
-          ))
-        )}
-      </Row>
+  {filteredStudents.length === 0 ? (
+    <Col className="text-center my-4">
+      <h4>NO RESULTS</h4>
+    </Col>
+  ) : (
+    filteredStudents.map((student, index) => (
+      <Col md={2} sm={6} xs={12} key={index} className="mb-4"> {/* Adjust column sizes */}
+        <Card>
+          <Card.Img
+            variant="top"
+            src={studentImages[student.name]}
+            alt={student.name}
+          />
+          <Card.Body>
+            <Card.Title>{student.name}</Card.Title>
+            {/* Display top matches */}
+            <h5>Top Matches:</h5>
+            <ul>
+              {matches[student.name]?.map((match) => (
+                <li key={match.alumni}>
+                  <img
+                    src={alumniImages[match.alumni]}
+                    alt={match.alumni}
+                    style={{
+                      width: "50px",
+                      height: "50px",
+                      borderRadius: "50%",
+                    }}
+                  />
+                  {match.alumni} - {match.score}%
+                </li>
+              )) || <li>No matches found.</li>}
+            </ul>
+          </Card.Body>
+        </Card>
+      </Col>
+    ))
+  )}
+</Row>
+
     </Container>
   );
 };

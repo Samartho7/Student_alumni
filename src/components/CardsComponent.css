@@ -1,4 +1,83 @@
-.card-text, .card-title {
-    text-decoration: none; /* Remove underline */
+/* General styling for the container */
+.container {
+  margin-top: 2rem;
+}
+
+/* Card styling */
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #444;
+  color: #fff;
+  transition: transform 0.3s ease-in-out;
+  overflow: hidden; /* Ensures no content overflows */
+  height: 500px; /* Increase overall card height */
+  width: 100%; /* Ensure the card takes full width of its container */
+}
+
+/* Card Image styling */
+.card-img {
+  width: 100%;
+  height: 300px; /* Increase image height */
+  object-fit: cover; /* Ensure the image covers the area */
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Card Body */
+.card-body {
+  padding: 1rem;
+  height: 100%; /* Ensure the card body takes up remaining space */
+}
+
+.card-title {
+  font-size: 1.75rem; /* Larger font size for the title */
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.card-text {
+  font-size: 1.1rem; /* Larger font size for text */
+  color: black;
+  margin-bottom: 1rem;
+}
+
+/* Hover effect for the cards */
+.card:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.card:hover .card-img {
+  transform: scale(1.1); /* Zoom image on hover */
+}
+
+/* Adjust card styling for responsive design */
+@media (max-width: 768px) {
+  .card-img {
+    height: 250px; /* Adjust image height on mobile for better proportions */
   }
-  
+
+  .card-title {
+    font-size: 1.5rem; /* Adjust font size for mobile */
+  }
+
+  .card-text {
+    font-size: 1rem; /* Adjust font size for mobile */
+  }
+}
+
+/* Add padding to columns for better spacing */
+.col-sm-4 {
+  padding: 0 15px;
+  margin-bottom: 20px; /* Ensure spacing between columns */
+}
+
+/* Styling for the link to remove the default link styles */
+.link {
+  text-decoration: none;
+}
+
+/* Styling for active links, add underline on hover */
+.card-title:hover {
+  text-decoration: underline;
+}

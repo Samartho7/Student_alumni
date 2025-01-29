@@ -26,45 +26,77 @@
 
 /* Card styles */
 .card {
-  border: none;
-  border-radius: 80px;
+  border: 1px solid #ddd;
   background-color: #444;
   color: #fff;
-  width: 90%; /* Reduce width of the card */
-  margin: 0 auto; /* Center the card */
+  width: 100%;
+  max-width: 250px; /* Limit max-width for uniform card size */
+  height: 350px; /* Fixed height to ensure all cards are the same size */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Spread content evenly */
+  text-align: center;
+  overflow: hidden; /* Prevent content overflow */
   transition: transform 0.3s ease-in-out;
 }
 
 .card-body {
-  padding: 0.1rem; /* Reduce padding inside the card */
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Spread content evenly */
+  height: calc(350px - 150px); /* Adjust for consistent height */
 }
 
+/* Card image styles */
 .card-img {
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
-  height: 400px; /* Reduce image height */
-  object-fit: cover; /* Ensure the image fits within the space */
-}
-/* .student-img {
-  height: 200px;
-  object-fit: cover;
-} */
-
-.match-img {
-  height: 30px; /* Adjust size as needed */
-  width: 30px; /* Adjust size as needed */
-  border-radius: 50%; /* To make them circular */
-  margin-right: 5px; /* Space between image and text */
+  width: 100%;
+  height: 150px; /* Fixed height for images */
+  object-fit: cover; /* Ensure the image fits without distortion */
+  border-bottom: 1px solid #ddd; /* Add a separator line between image and text */
 }
 
+/* Card title styles */
+.card-title {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 0.5rem 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; /* Truncate long titles with ellipsis */
+}
 
+/* Card text styles */
+.card-text {
+  font-size: 0.875rem;
+  margin: 0.25rem 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Card hover effect */
 .card:hover {
   transform: scale(1.02);
 }
 
-/* Media query for even smaller adjustments on mobile */
+/* Row and column adjustments */
+.row {
+  margin: 0 -15px; /* Adjust spacing between cards */
+}
+
+.col-md-3 {
+  padding: 0px; /* Ensure no extra padding between columns */
+}
+
 @media (max-width: 768px) {
   .card {
-    width: 100%; /* Adjust card width for mobile screens */
+    max-width: 100%;
+    height: 300px; /* Adjust height for smaller screens */
+  }
+
+  .card-img {
+    height: 120px; /* Adjust image height for smaller screens */
   }
 }
