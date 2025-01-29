@@ -28,7 +28,7 @@
 h2 {
   font-size: 2rem; /* Larger font size */
   font-weight: bold;
-  color: #2E8B57; /* Dark green color */
+  color: #00FFFF; /* Dark green color */
   margin-bottom: 1.5rem;
   transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover */
   position: relative;
@@ -39,7 +39,7 @@ h2::after {
   content: '';
   width: 60px;
   height: 4px;
-  background-color: #4CAF50; /* Lighter green underline */
+  background-color: #5B2C6F; /* Lighter green underline */
   display: block;
   margin: 10px auto 0;
   transition: width 0.3s ease;
@@ -47,7 +47,7 @@ h2::after {
 
 /* Hover effect to expand underline and change color */
 h2:hover {
-  color: #4CAF50; /* Change to lighter green */
+  color: #5B2C6F; /* Change to lighter green */
   transform: scale(1.05); /* Slight scaling effect on hover */
 }
 

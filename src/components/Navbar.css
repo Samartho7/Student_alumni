@@ -13,14 +13,14 @@
 .custom-navbar .navbar-brand {
   font-size: 1.5rem; /* Larger font size */
   font-weight: bold;
-  color: #2E8B57; /* Dark green color for brand name */
+  color: #5B2C6F; /* Dark green color for brand name */
   transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effect */
   padding-left: 50px; /* 50px padding on the left of Alumnify */
   padding-right: 50px; /* 50px padding on the right of Alumnify */
 }
 
 .custom-navbar .navbar-brand:hover {
-  color: #4CAF50; /* Lighter green on hover */
+  color: #5B2C6F; /* Lighter green on hover */
   transform: scale(1.05); /* Slight scaling effect on hover */
 }
 /* Add styles for the logo */
@@ -43,7 +43,7 @@
 /* Navbar links hover styling */
 .custom-navbar .nav-link:hover {
   color: #ffffff; /* White text color on hover */
-  background-color: rgba(76, 174, 80, 0.8); /* Green background with 80% opacity */
+  background-color: rgba(91, 44, 111, 0.8); /* Green background with 80% opacity */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect for a 3D appearance */
   transform: translateY(-2px); /* Slight lift effect on hover */
 }

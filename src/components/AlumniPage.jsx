@@ -107,6 +107,7 @@ import alm10 from '../assets/alm10.jpg';
 import alm11 from '../assets/alm11.jpg';
 import alm12 from '../assets/alm12.jpg';
 
+
 // Example images for alumni
 const alumniImages = {
   'John Doe': alm1,
@@ -122,7 +123,6 @@ const alumniImages = {
   'Ethan Green': alm11,
   'Olivia Blue': alm12
 };
-
 const AlumniPage = () => {
   const [alumni, setAlumni] = useState([]);
   const [search, setSearch] = useState('');
@@ -164,6 +164,7 @@ const AlumniPage = () => {
   return (
     <Container fluid>
       <Row className="my-4">
+        <h2>Alumni Page</h2>
         <Col md={6}>
           <Form.Control
             type="text"

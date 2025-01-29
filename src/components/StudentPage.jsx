@@ -326,6 +326,7 @@ const StudentPage = () => {
   return (
     <Container fluid>
       <Row className="my-4">
+      <h2>Student Page</h2>
         <Col md={6}>
           <Form.Control
             type="text"
