@@ -343,36 +343,37 @@ const StudentPage = () => {
     </Col>
   ) : (
     filteredStudents.map((student, index) => (
-      <Col md={2} sm={6} xs={12} key={index} className="mb-4"> {/* Adjust column sizes */}
-        <Card>
-          <Card.Img
-            variant="top"
-            src={studentImages[student.name]}
-            alt={student.name}
-          />
-          <Card.Body>
-            <Card.Title>{student.name}</Card.Title>
-            {/* Display top matches */}
-            <h5>Top Matches:</h5>
-            <ul>
-              {matches[student.name]?.map((match) => (
-                <li key={match.alumni}>
-                  <img
-                    src={alumniImages[match.alumni]}
-                    alt={match.alumni}
-                    style={{
-                      width: "50px",
-                      height: "50px",
-                      borderRadius: "50%",
-                    }}
-                  />
-                  {match.alumni} - {match.score}%
-                </li>
-              )) || <li>No matches found.</li>}
-            </ul>
-          </Card.Body>
-        </Card>
-      </Col>
+      <Col lg={2} md={3} sm={4} xs={6} key={index} className="mb-3">
+  <Card className="student-card">
+    <Card.Img
+      variant="top"
+      src={studentImages[student.name]}
+      alt={student.name}
+      className="student-img"
+    />
+    <Card.Body className="d-flex flex-column align-items-center">
+      <h5 className="student-name">{student.name}</h5>
+      <div className="match-section">
+        <h6 className="text-center">Top Matches:</h6>
+        <div className="match-list d-flex flex-wrap justify-content-center">
+          {matches[student.name]?.length ? (
+            matches[student.name].map((match) => (
+              <div key={match.alumni} className="match-item d-flex align-items-center">
+                <img src={alumniImages[match.alumni]} alt={match.alumni} className="match-img" />
+                <span className="match-text">{match.alumni} ({match.score}%)</span>
+              </div>
+            ))
+          ) : (
+            <p className="match-text text-center">No matches found.</p>
+          )}
+        </div>
+      </div>
+    </Card.Body>
+  </Card>
+</Col>
+
+
+
     ))
   )}
 </Row>

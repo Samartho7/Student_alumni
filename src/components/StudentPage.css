@@ -100,3 +100,69 @@
     height: 120px; /* Adjust image height for smaller screens */
   }
 }
+.student-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+  height: 100%;
+  min-width: 160px;
+}
+
+.student-card:hover {
+  transform: translateY(-3px);
+}
+
+.student-img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.student-name {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 6px;
+  color: #333;
+}
+
+.match-section {
+  margin-top: 8px;
+  width: 100%;
+}
+
+.match-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+  padding: 0;
+  margin-top: 6px;
+  max-height: 120px; /* Ensure enough space for visibility */
+  overflow-y: auto;  /* Allows scrolling when necessary */
+}
+
+.match-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(0, 0, 0, 0.05);
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 14px;
+  white-space: nowrap;
+  width: 100%;
+}
+
+
+.match-img {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  object-fit: cover;
+}
