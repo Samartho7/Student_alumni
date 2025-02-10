@@ -325,18 +325,22 @@ const StudentPage = () => {
 
   return (
     <Container fluid>
-      <Row className="my-4">
-      <h2>Student Page</h2>
+      <Row className="my-4 text-center">
+  <h2>Student Page</h2>
+      <Row className="justify-content-center">
         <Col md={6}>
           <Form.Control
             type="text"
             placeholder="Search by Name"
             value={search}
             onChange={e => setSearch(e.target.value)}
+            className="search-bar"
           />
         </Col>
       </Row>
-      <Row>
+    </Row>
+    <Row>
+
   {filteredStudents.length === 0 ? (
     <Col className="text-center my-4">
       <h4>NO RESULTS</h4>

@@ -15,7 +15,7 @@ const AboutUs = () => {
 
           <h3>For Students</h3>
           <p>
-            Our portal offers a wealth of resources designed to enhance your educational journey and career development. Students can access a range of tools and information, including academic resources and career guidance, internship opportunities, and industry insights. By connecting with alumni, you gain access to invaluable mentorship and advice, helping you navigate your career path and make informed decisions about your future. Additionally, the portal provides opportunities to participate in community events, workshops, and networking sessions, enriching your overall experience.
+            Our portal offers a wealth of resources designed to enhance your educational journey and career development. Students can access a range of tools and information, including academic resources, career guidance, internship opportunities, and industry insights. By connecting with alumni, you gain access to invaluable mentorship and advice, helping you navigate your career path and make informed decisions about your future. Additionally, the portal provides opportunities to participate in community events, workshops, and networking sessions, enriching your overall experience.
           </p>
 
           <h3>For Alumni</h3>
@@ -37,7 +37,7 @@ const AboutUs = () => {
       {/* Render the CardsComponent below the About Us content */}
       <Row className="mt-4">
         <Col>
-          <CardsComponent /> {/* CardsComponent added here */}
+          <CardsComponent />
         </Col>
       </Row>
     </Container>

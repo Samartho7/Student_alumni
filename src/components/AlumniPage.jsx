@@ -163,17 +163,21 @@ const AlumniPage = () => {
 
   return (
     <Container fluid>
-      <Row className="my-4">
+      <Row className="my-4 text-center">
         <h2>Alumni Page</h2>
-        <Col md={6}>
-          <Form.Control
-            type="text"
-            placeholder="Search by Name"
-            value={search}
-            onChange={e => setSearch(e.target.value)}
-          />
-        </Col>
-      </Row>
+        <Row className="justify-content-center">
+          <Col md={6}>
+            <Form.Control
+              type="text"
+              placeholder="Search by Name"
+              value={search}
+              onChange={e => setSearch(e.target.value)}
+              className="search-bar"
+            />
+          </Col>
+        </Row>
+</Row>
+
       <Row>
         {filteredAlumni.length === 0 ? (
           <Col className="text-center my-4">

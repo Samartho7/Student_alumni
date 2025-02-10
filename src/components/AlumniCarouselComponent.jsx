@@ -1,7 +1,7 @@
 import React from 'react';
 import { Carousel, Card, Row, Col } from 'react-bootstrap';
-import { VscTriangleRight, VscTriangleLeft } from "react-icons/vsc"; // Example: React Icons
-import './AlumniCarousel.css'; // Custom CSS for alumni carousel
+import { VscTriangleRight, VscTriangleLeft } from "react-icons/vsc"; 
+import './AlumniCarousel.css'; 
 import alm1 from '../assets/alm1.jpg';
 import alm2 from '../assets/alm2.jpg';
 import alm3 from '../assets/alm3.jpg';
@@ -16,7 +16,6 @@ import alm11 from '../assets/alm11.jpg';
 import alm12 from '../assets/alm12.jpg';
 
 const AlumniCarouselComponent = () => {
-  // Sample alumni data, you can replace this with real data
   const alumniProfiles = [
     { name: 'John Doe', image: alm1, description: 'Software Engineer at Google' },
     { name: 'Jane Smith', image: alm2, description: 'Data Scientist at Facebook' },
@@ -33,16 +32,16 @@ const AlumniCarouselComponent = () => {
   ];
 
   return (
-    <Carousel className="alumni-carousel"
-            nextIcon={<VscTriangleRight style={{ color: 'black', fontSize: '3rem' }} />}
-            prevIcon={<VscTriangleLeft style={{ color: 'black', fontSize: '3rem' }} />}
-            >
-      {/* Divide alumni profiles into groups of 4 per carousel item */}
-      {[0, 4, 8].map((startIndex) => (
+    <Carousel 
+      className="alumni-carousel"
+      nextIcon={<VscTriangleRight style={{ color: 'black', fontSize: '3rem' }} />}
+      prevIcon={<VscTriangleLeft style={{ color: 'black', fontSize: '3rem' }} />}
+    >
+      {[0, 5, 10].map((startIndex) => ( // Now displaying 5 per slide
         <Carousel.Item key={startIndex}>
-          <Row>
-            {alumniProfiles.slice(startIndex, startIndex + 4).map((alumni, index) => (
-              <Col key={index} md={3}> {/* Adjust to fit 4 cards in a row */}
+          <Row className="justify-content-center g-3">
+            {alumniProfiles.slice(startIndex, startIndex + 5).map((alumni, index) => (
+              <Col key={index} md={2} className="d-flex justify-content-center"> {/* Adjusted to 2-column size */}
                 <Card className="alumni-card">
                   <Card.Img variant="top" src={alumni.image} />
                   <Card.Body>
