@@ -5,10 +5,10 @@ import './AboutUs.css'; // Import custom CSS for AboutUs
 
 const AboutUs = () => {
   return (
-    <Container className="about-us-container"> {/* Apply the about-us class here */}
-      <Row>
-        <Col>
-          <h2 className="center-heading">About Us</h2> {/* Centered heading */}
+    <Container className="about-us-container">
+      <Row className="justify-content-center"> {/* Centered content */}
+        <Col md={20} lg={10}> {/* Restrict width for better readability */}
+          <h2 className="center-heading">About Us</h2>
           <p>
             Welcome to our Student-Alumni Portal, a dynamic platform crafted to strengthen the connection between current students and alumni. Our mission is to foster a vibrant and supportive community where students and alumni can engage, collaborate, and grow together.
           </p>
@@ -35,8 +35,8 @@ const AboutUs = () => {
       </Row>
 
       {/* Render the CardsComponent below the About Us content */}
-      <Row className="mt-4">
-        <Col>
+      <Row className="mt-4 justify-content-center">
+        <Col md={20} lg={10}>
           <CardsComponent />
         </Col>
       </Row>
