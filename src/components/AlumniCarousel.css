@@ -35,12 +35,32 @@
 .alumni-card .card-title {
     font-size: 1.2rem;
     font-weight: bold;
-    color: #2E8B57; /* Same green as the navbar */
+    color: #2E8B57;
+    margin-bottom: 2px !important; /* Ensure minimal space */
 }
 
 .alumni-card .card-text {
-    font-size: 1rem;
-    color: #555;
+    font-size: 0.9rem;
+    color: gray;
+    text-align: center;
+    padding: 5px 10px;
+    white-space: normal; /* Ensure text wraps */
+    overflow-wrap: break-word; /* Break long words */
+}
+
+.alumni-card .card-body {
+    height: 300px; /* Adjust as needed */
+    overflow: hidden; /* Prevents overflow */
+    text-overflow: ellipsis; /* Adds ... when text overflows */
+}
+
+
+.card-content {
+    max-height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px; /* Adjust spacing between elements */
 }
 
 /* Remove the custom arrow styling to revert to default appearance */
@@ -54,10 +74,11 @@
 
 /* Adjust carousel item layout for mobile */
 @media (max-width: 768px) {
-    .alumni-card {
-        margin-bottom: 10px; /* Decrease margin on mobile */
+    .alumni-card .card-text {
+        font-size: 0.8rem;
     }
 }
+
 /* ALUMNI CAROUSEL */
 .alumni-carousel {
     width: 100%;
@@ -134,11 +155,11 @@
 }
 
 .carousel-control-prev {
-    margin-left: -50px;
+    margin-left: -0px;
 }
 
 .carousel-control-next {
-    margin-right: -50px;
+    margin-right: -0px;
 }
 
 /* RESPONSIVENESS */
@@ -161,10 +182,10 @@
     }
 
     .carousel-control-prev {
-        margin-left: -30px;
+        margin-left: -0px;
     }
 
     .carousel-control-next {
-        margin-right: -30px;
+        margin-right: -0px;
     }
 }

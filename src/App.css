@@ -1,6 +1,14 @@
 /* App.css */
+html{
+  box-sizing: border-box;
+  overflow-x: none;
+}
+body {
+  overflow-x: hidden;
+}
 
 /* Root container styling */
+
 
 #root {
   max-width: 100%; /* Make it full width */

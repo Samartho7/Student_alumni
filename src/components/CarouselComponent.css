@@ -1,7 +1,10 @@
 .carousel-item img {
   border-radius: 10px;
+  object-fit: cover;
+  object-position: top;
+  height: 600px; /* Adjust as needed */
+  width: 100%;
 }
-
 .carousel-caption h3 {
   font-size: 2rem;
   font-weight: bold;

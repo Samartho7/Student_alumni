@@ -9,7 +9,7 @@
   justify-content: center;
   gap: 50px;
   background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%); /* Match navbar gradient */
-  color: #2E8B57; /* Darker green text color */
+  color: #5B2C6F; /* Darker green text color */
   padding: 50px;
   box-sizing: border-box;
 }
@@ -41,10 +41,10 @@ form {
 input {
   padding: 0.8rem;
   outline: none;
-  border: 1px solid #2E8B57; /* Darker green border */
+  border: 1px solid #5B2C6F; /* Darker green border */
   background-color: #ffffff; /* White background for input */
   border-radius: 10px;
-  color: #2E8B57; /* Darker green text color */
+  color: black; /* Darker green text color */
 }
 
 /* Label styling */
@@ -54,7 +54,7 @@ label {
   align-items: center;
   justify-content: space-between;
   text-decoration: underline;
-  color: #2E8B57; /* Darker green text */
+  color: #5B2C6F; /* Darker green text */
   gap: 20px;
 }
 
@@ -71,7 +71,7 @@ label img {
 button {
   padding: 0.8rem 2rem;
   border: none;
-  background-color: #2E8B57; /* Darker green background */
+  background-color: #5B2C6F; /* Darker green background */
   color: #ffffff; /* White text color */
   border-radius: 150px;
   cursor: pointer;
@@ -86,7 +86,10 @@ button {
 
 /* Button hover effect */
 button:hover {
-  background-color: #1e6f41; /* Darker green on hover */
+  color: #ffffff; /* White text color on hover */
+  background-color: rgba(91, 44, 111, 0.8); /* Green background with 80% opacity */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect for a 3D appearance */
+  transform: translateY(-2px);
 }
 
 /* Separator styling */

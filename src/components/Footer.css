@@ -3,7 +3,7 @@
 /* Modern white gradient background */
 .custom-footer {
   background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%);
-  color: #2E8B57; /* Darker green for text */
+  color: black; /* Darker green for text */
   padding: 20px;
   text-align: center;
   font-size: 1rem;
@@ -22,5 +22,5 @@
 
 /* Footer text hover effect */
 .custom-footer p:hover {
-  color: #4CAF50; /* Lighter green on hover */
+  color: #5B2C6F; /* Lighter green on hover */
 }
