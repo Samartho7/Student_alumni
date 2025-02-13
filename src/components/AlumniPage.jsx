@@ -157,9 +157,16 @@ const AlumniPage = () => {
     fetchData();
   }, []);
 
-  const filteredAlumni = Array.isArray(alumni) ? alumni.filter(alum => 
-    alum.name.toLowerCase().includes(search.toLowerCase())
-  ) : [];
+  const filteredAlumni = Array.isArray(alumni) ? alumni.filter(alum => {
+    const searchLower = search.toLowerCase();
+  
+    return (
+      alum.name.toLowerCase().includes(searchLower) ||
+      alum.skills.some(skill => skill.toLowerCase().includes(searchLower)) ||
+      alum.interests.some(interest => interest.toLowerCase().includes(searchLower)) ||
+      alum.location.toLowerCase().includes(searchLower)
+    );
+  }) : [];
 
   return (
     <Container fluid>
@@ -169,7 +176,7 @@ const AlumniPage = () => {
           <Col md={6}>
             <Form.Control
               type="text"
-              placeholder="Search by Name"
+              placeholder="Search by Name, Skills, Interests or Location"
               value={search}
               onChange={e => setSearch(e.target.value)}
               className="search-bar"

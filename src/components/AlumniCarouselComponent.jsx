@@ -58,8 +58,8 @@ const AlumniCarouselComponent = () => {
   return (
     <Carousel 
       className="alumni-carousel"
-      nextIcon={<VscTriangleRight style={{ color: 'black', fontSize: '3rem' }} />}
-      prevIcon={<VscTriangleLeft style={{ color: 'black', fontSize: '3rem' }} />}
+      nextIcon={<VscTriangleRight style={{ color: '#5B2C6F', fontSize: '3rem' }} />}
+      prevIcon={<VscTriangleLeft style={{ color: '#5B2C6F', fontSize: '3rem' }} />}
     >
       {Array.from({ length: Math.ceil(alumni.length / 5) }).map((_, slideIndex) => (
         <Carousel.Item key={slideIndex}>

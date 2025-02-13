@@ -10,8 +10,8 @@ const CarouselComponent = () => {
   return (
     <Container fluid className="p-0">
       <Carousel
-        nextIcon={<VscTriangleRight style={{ color: '#fff', fontSize: '3.5rem' }} />}
-        prevIcon={<VscTriangleLeft style={{ color: '#fff', fontSize: '3.5rem' }} />}
+        nextIcon={<VscTriangleRight style={{ color: '#5B2C6F', fontSize: '3.5rem' }} />}
+        prevIcon={<VscTriangleLeft style={{ color: '#5B2C6F', fontSize: '3.5rem' }} />}
       >
         <Carousel.Item>
           <img className="d-block w-100" src={car1} alt="First slide" />

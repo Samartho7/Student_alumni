@@ -23,7 +23,7 @@ const Login = () => {
         <form>
           <input type="email" name="email" placeholder="Email" />
           <input type="password" name="password" placeholder="Password" />
-          <button>Sign in</button>
+          <button>Log in</button>
         </form>
       </div>
       <div className="seperator"></div>

@@ -1,4 +1,31 @@
 /* Page container styling */
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.forums-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1; /* Pushes the footer to the bottom */
+}
+
+.footer {
+  text-align: center;
+  padding: 10px 0;
+  background-color: #f8f9fa;
+  color: #333;
+  border-top: 1px solid #ddd;
+  position: relative;
+  width: 100%;
+}
+
 .forums {
     height: 100vh;
     width: 100%;
@@ -28,14 +55,17 @@
   
   /* Forum card styling */
   .forum-card {
-    width: 100%;
-    padding: 1.5rem;
+    width: 90%; /* Makes the card take 80% of the page width */
+    max-width: 900px; /* Limits the maximum width */
+    margin: 0 auto 20px; /* Centers the cards */
+    padding: 1rem; /* Reduced padding */
     background-color: #ffffff;
-    border: 1px solid #2E8B57; /* Darker green border */
+    border: 1px solid #5B2C6F;
     border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Consistent shadow */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
   }
+   
   
   /* Forum card hover effect */
   .forum-card:hover {
@@ -48,7 +78,16 @@
     font-weight: bold;
     margin-bottom: 0.5rem;
   }
-  
+
+  .row {
+    margin-left: -5px;
+    margin-right: -5px;
+  }
+
+  .col {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
   /* Forum description styling */
   .forum-card p {
     color: #444;
@@ -58,21 +97,23 @@
   
   /* Button styling */
   .create-post-btn {
-    padding: 0.8rem 2rem;
-    border: none;
-    background-color: #2E8B57; /* Darker green background */
-    color: #ffffff; /* White text */
-    border-radius: 150px;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
     font-size: 1rem;
-    text-align: center;
-  }
-  
-  /* Button hover effect */
-  .create-post-btn:hover {
-    background-color: #1e6f41; /* Darker green on hover */
-  }
+    font-weight: bold;
+    text-decoration: none;
+    color: #5B2C6F; /* Ensure visible text */
+    padding: 8px 15px;
+    border: 2px solid #5B2C6F;
+    border-radius: 8px;
+    display: inline-block;
+    background-color: white; /* Add background */
+    transition: all 0.3s ease;
+}
+
+.create-post-btn:hover {
+    background-color: #5B2C6F;
+    color: white; /* Ensure contrast on hover */
+}
+
   
   /* Separator styling */
   .separator {
@@ -81,3 +122,9 @@
     background-color: #f0f0f0; /* Lighter separator line */
   }
   
+  .bigger-card {
+    width: 100%; /* Make the card take full width of the column */
+    max-width: 350px; /* Adjust this as needed */
+    padding: 2rem; /* Increase padding */
+    font-size: 1.1rem; /* Increase text size */
+}
