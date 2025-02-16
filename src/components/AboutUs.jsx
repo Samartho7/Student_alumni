@@ -5,17 +5,17 @@ import './AboutUs.css'; // Import custom CSS for AboutUs
 
 const AboutUs = () => {
   return (
-    <Container className="about-us-container"> {/* Apply the about-us class here */}
-      <Row>
-        <Col>
-          <h2 className="center-heading">About Us</h2> {/* Centered heading */}
+    <Container className="about-us-container">
+      <Row className="justify-content-center"> {/* Centered content */}
+        <Col md={20} lg={10}> {/* Restrict width for better readability */}
+          <h2 className="center-heading">About Us</h2>
           <p>
             Welcome to our Student-Alumni Portal, a dynamic platform crafted to strengthen the connection between current students and alumni. Our mission is to foster a vibrant and supportive community where students and alumni can engage, collaborate, and grow together.
           </p>
 
           <h3>For Students</h3>
           <p>
-            Our portal offers a wealth of resources designed to enhance your educational journey and career development. Students can access a range of tools and information, including academic resources and career guidance, internship opportunities, and industry insights. By connecting with alumni, you gain access to invaluable mentorship and advice, helping you navigate your career path and make informed decisions about your future. Additionally, the portal provides opportunities to participate in community events, workshops, and networking sessions, enriching your overall experience.
+            Our portal offers a wealth of resources designed to enhance your educational journey and career development. Students can access a range of tools and information, including academic resources, career guidance, internship opportunities, and industry insights. By connecting with alumni, you gain access to invaluable mentorship and advice, helping you navigate your career path and make informed decisions about your future. Additionally, the portal provides opportunities to participate in community events, workshops, and networking sessions, enriching your overall experience.
           </p>
 
           <h3>For Alumni</h3>
@@ -35,9 +35,9 @@ const AboutUs = () => {
       </Row>
 
       {/* Render the CardsComponent below the About Us content */}
-      <Row className="mt-4">
-        <Col>
-          <CardsComponent /> {/* CardsComponent added here */}
+      <Row className="mt-4 justify-content-center">
+        <Col md={20} lg={10}>
+          <CardsComponent />
         </Col>
       </Row>
     </Container>

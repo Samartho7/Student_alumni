@@ -157,23 +157,34 @@ const AlumniPage = () => {
     fetchData();
   }, []);
 
-  const filteredAlumni = Array.isArray(alumni) ? alumni.filter(alum => 
-    alum.name.toLowerCase().includes(search.toLowerCase())
-  ) : [];
+  const filteredAlumni = Array.isArray(alumni) ? alumni.filter(alum => {
+    const searchLower = search.toLowerCase();
+  
+    return (
+      alum.name.toLowerCase().includes(searchLower) ||
+      alum.skills.some(skill => skill.toLowerCase().includes(searchLower)) ||
+      alum.interests.some(interest => interest.toLowerCase().includes(searchLower)) ||
+      alum.location.toLowerCase().includes(searchLower)
+    );
+  }) : [];
 
   return (
     <Container fluid>
-      <Row className="my-4">
+      <Row className="my-4 text-center">
         <h2>Alumni Page</h2>
-        <Col md={6}>
-          <Form.Control
-            type="text"
-            placeholder="Search by Name"
-            value={search}
-            onChange={e => setSearch(e.target.value)}
-          />
-        </Col>
-      </Row>
+        <Row className="justify-content-center">
+          <Col md={6}>
+            <Form.Control
+              type="text"
+              placeholder="Search by Name, Skills, Interests or Location"
+              value={search}
+              onChange={e => setSearch(e.target.value)}
+              className="search-bar"
+            />
+          </Col>
+        </Row>
+</Row>
+
       <Row>
         {filteredAlumni.length === 0 ? (
           <Col className="text-center my-4">

@@ -35,12 +35,32 @@
 .alumni-card .card-title {
     font-size: 1.2rem;
     font-weight: bold;
-    color: #2E8B57; /* Same green as the navbar */
+    color: #2E8B57;
+    margin-bottom: 2px !important; /* Ensure minimal space */
 }
 
 .alumni-card .card-text {
-    font-size: 1rem;
-    color: #555;
+    font-size: 0.9rem;
+    color: gray;
+    text-align: center;
+    padding: 5px 10px;
+    white-space: normal; /* Ensure text wraps */
+    overflow-wrap: break-word; /* Break long words */
+}
+
+.alumni-card .card-body {
+    height: 300px; /* Adjust as needed */
+    overflow: hidden; /* Prevents overflow */
+    text-overflow: ellipsis; /* Adds ... when text overflows */
+}
+
+
+.card-content {
+    max-height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px; /* Adjust spacing between elements */
 }
 
 /* Remove the custom arrow styling to revert to default appearance */
@@ -54,7 +74,118 @@
 
 /* Adjust carousel item layout for mobile */
 @media (max-width: 768px) {
+    .alumni-card .card-text {
+        font-size: 0.8rem;
+    }
+}
+
+/* ALUMNI CAROUSEL */
+.alumni-carousel {
+    width: 100%;
+    margin: 0 auto;
+    padding: 50px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* ALUMNI CARD */
+.alumni-card {
+    flex: 1 1 auto;
+    width: 100%;
+    max-width: 220px; /* Adjusted for 5 cards per row */
+    min-width: 180px;
+    height: auto;
+    min-height: 320px;
+    margin: 10px 5px; /* Adjusted margin */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+}
+
+.alumni-card:hover {
+    transform: scale(1.03);
+}
+
+/* IMAGE */
+.alumni-card img {
+    width: 120px; /* Slightly smaller image */
+    height: 120px;
+    margin: 10px auto;
+    border-radius: 50%;
+}
+
+/* TEXT */
+.alumni-card .card-title {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #5B2C6F;
+    text-align: center;
+}
+
+.alumni-card .card-text {
+    font-size: 0.9rem;
+    color: gray;
+    text-align: center;
+    padding: 5px 10px;
+}
+
+/* GRID SYSTEM */
+.row {
+    margin-right: 0;
+    margin-left: 0;
+    width: 100%;
+}
+
+.col {
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+/* CAROUSEL CONTROLS */
+.carousel-control-prev,
+.carousel-control-next {
+    width: auto;
+}
+
+.carousel-control-prev {
+    margin-left: -0px;
+}
+
+.carousel-control-next {
+    margin-right: -0px;
+}
+
+/* RESPONSIVENESS */
+@media (max-width: 1024px) { /* Adjust for medium screens */
     .alumni-card {
-        margin-bottom: 10px; /* Decrease margin on mobile */
+        max-width: 180px;
+    }
+}
+
+@media (max-width: 768px) { /* Mobile view */
+    .alumni-card {
+        flex: 1 1 100%;
+        max-width: 280px;
+        margin-bottom: 15px;
+    }
+
+    .alumni-card img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .carousel-control-prev {
+        margin-left: -0px;
+    }
+
+    .carousel-control-next {
+        margin-right: -0px;
     }
 }

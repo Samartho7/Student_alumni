@@ -2,30 +2,37 @@
 
 /* Page container styling */
 .login {
-  height: 100vh;
+  min-height: 100vh; /* Ensures it fills the viewport but doesn't push content too much */
   width: 100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 50px;
-  background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%); /* Match navbar gradient */
-  color: #2E8B57; /* Darker green text color */
-  padding: 50px;
+  justify-content: center; /* Align content towards the top */
+  gap: 20px;
+  background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%);
+  color: #5B2C6F;
+  padding: 5px 0px; /* Reduce padding */
   box-sizing: border-box;
 }
 
-/* Item container styling */
+
 .item {
-  flex: 1;
+  width: 100%;
+  max-width: 400px; /* Adjust width to center forms */
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
-  backdrop-filter: blur(10px); /* Consistent blur */
-  padding: 20px;
+  backdrop-filter: blur(10px);
+  padding: 30px;
   border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15); /* Match navbar shadow */
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Remove separator */
+.seperator {
+  display: none;
 }
 
 /* Form styling */
@@ -41,10 +48,10 @@ form {
 input {
   padding: 0.8rem;
   outline: none;
-  border: 1px solid #2E8B57; /* Darker green border */
+  border: 1px solid #5B2C6F; /* Darker green border */
   background-color: #ffffff; /* White background for input */
   border-radius: 10px;
-  color: #2E8B57; /* Darker green text color */
+  color: black; /* Darker green text color */
 }
 
 /* Label styling */
@@ -54,7 +61,7 @@ label {
   align-items: center;
   justify-content: space-between;
   text-decoration: underline;
-  color: #2E8B57; /* Darker green text */
+  color: #5B2C6F; /* Darker green text */
   gap: 20px;
 }
 
@@ -69,25 +76,24 @@ label img {
 
 /* Button styling */
 button {
-  padding: 0.8rem 2rem;
-  border: none;
-  background-color: #2E8B57; /* Darker green background */
-  color: #ffffff; /* White text color */
-  border-radius: 150px;
-  cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
   font-size: 1rem;
-  text-align: center;
-  width: auto;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  font-weight: bold;
+  text-decoration: none;
+  color: #5B2C6F;
+  margin-top: 15px;
+  padding: 8px 15px;
+  border: 2px solid #5B2C6F;
+  border-radius: 8px !important;
+  display: inline-block;
+  transition: all 0.3s ease;
+  background-color: transparent; /* Make background transparent like .card-link */
 }
 
-/* Button hover effect */
 button:hover {
-  background-color: #1e6f41; /* Darker green on hover */
+  background-color: #5B2C6F;
+  color: white;
 }
+
 
 /* Separator styling */
 .seperator {

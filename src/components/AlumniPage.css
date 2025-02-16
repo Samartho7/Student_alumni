@@ -1,4 +1,9 @@
 /* AlumniPage.css */
+.search-bar {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
 
 /* Set a fixed size for cards */
 .card {
